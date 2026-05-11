@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Moja pierwsza strona</title>
 </head>
+
 <body>
-<header>
+
+<header role="banner">
 <h1>Cześć, jestem Filip</h1>
 <p>Uczę się tworzyć strony internetowe.</p>
 </header>
-<nav>
+
+<nav aria-label="Nawigacja główna">
 <a href="#o-mnie">O mnie</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
-<main>
+
+<main role="main">
+
 <section id="o-mnie">
 <h2>O mnie</h2>
 <p>Jestem uczniem klasy 4 w Technikum Informatycznym.</p>
 </section>
+
 <section id="kontakt">
 <h2>Kontakt</h2>
-<p>Email: fsadowski81@gmail.com</p>
+<p>Email: <a href="mailto:fsadowski81@gmail.com">fsadowski81@gmail.com</a></p>
 </section>
+
 </main>
-<footer>
+
+<footer role="contentinfo">
+
 <p>&copy; 2026 Filip Sadowski</p>
+
 </footer>
+
 </body>
+
 </html>
