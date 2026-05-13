@@ -1,0 +1,2 @@
+DIV nie ma znaczenia semantycznego a section ma 
+section używa się do wyodrębniania sekcji strony a div do grupowania elementów 
