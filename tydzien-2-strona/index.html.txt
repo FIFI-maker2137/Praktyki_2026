@@ -18,7 +18,7 @@
 <p>Tu sprawdzisz pogodę w mieście.</p>
 </header>
 
-<nav>
+<nav> 
 <a href="#pogoda">Pogoda</a>
 <a href="zadania">Zadania</a>
 <a href="#kontakt">Kontakt</a>
