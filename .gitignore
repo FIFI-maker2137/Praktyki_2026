@@ -1,0 +1,15 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Edytor
+.vscode/
+.idea/
+
+# Node
+node_modules/
+dist/
+
+# Sekrety
+.env
+*.key
