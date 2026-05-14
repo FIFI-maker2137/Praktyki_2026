@@ -1,0 +1,56 @@
+:root {
+  --color-bg: #0F0F14;
+  --color-text: #FFFFFF;
+  --color-accent: #7F77DD;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* MOBILE – domyślne style (wąski ekran, 1 kolumna) */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* TABLET – od 768px */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .card {
+    width: calc(50% - 8px);
+  }
+}
+
+/* DESKTOP – od 1024px */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: calc(33% - 12px);
+  }
+}
