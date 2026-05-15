@@ -1,0 +1,32 @@
+
+
+:root {
+  --color-bg: #0F0F14;
+  --color-text: #E8E8F0;
+  --color-accent: #7F77DD;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 16px;
+}
+
+/* MOBILE – 1 kolumna */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* DESKTOP – od 768px */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
