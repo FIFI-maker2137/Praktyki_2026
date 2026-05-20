@@ -23,3 +23,22 @@ zadania.forEach((z) => {
   li.textContent = z;
   ul.appendChild(li);
 });
+
+const sekcja = document.getElementById("pogoda-tekst");
+
+async function pobierzPogode() {
+  sekcja.textContent = "Ładowanie…";
+  try {
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=51.76&longitude=19.46&current=temperature_2m";
+    const odpowiedz = await fetch(url);
+    if (!odpowiedz.ok) throw new Error("HTTP " + odpowiedz.status);
+    const dane = await odpowiedz.json();
+    const temp = dane.current.temperature_2m;
+    sekcja.textContent = `Temperatura w Łodzi: ${temp}°C`;
+  } catch (blad) {
+    sekcja.textContent = "Nie udało się pobrać pogody. Spróbuj odświeżyć.";
+    console.error(blad);
+  }
+}
+
+pobierzPogode();
