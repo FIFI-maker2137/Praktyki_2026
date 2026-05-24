@@ -1,0 +1,7 @@
+.header {
+  background: var(--color-accent);
+  padding: 1rem;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
