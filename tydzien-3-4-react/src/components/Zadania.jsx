@@ -1,13 +1,19 @@
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 
 export default function Zadania() {
-  const [zadania, setZadania] = useState([
-    "Powtórzyć HTML",
-    "Zrobić zakupy",
-  ]);
-  const [tekst, setTekst] = useState("");
-  const [blad, setBlad] = useState("");
+   const [zadania, setZadania] = useState([]);
+   const [tekst, setTekst] = useState("");
+   const [blad, setBlad] = useState("");
 
+useEffect(() => {
+  const zapisane = localStorage.getItem("zadania");
+  if (zapisane) setZadania(JSON.parse(zapisane));
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("zadania", JSON.stringify(zadania));
+}, [zadania]);
   function dodaj(e) {
     e.preventDefault();
     const wartosc = tekst.trim();
